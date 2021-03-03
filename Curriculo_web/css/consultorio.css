@@ -1,0 +1,25 @@
+/* estilo tela_principal.html do curriculo online */
+body {
+	padding-top: 50px;
+	margin-bottom: 60px;/* Margin bottom by footer height */
+}
+/* Sticky footer styles------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.footer p {
+	#line-height: 50px;
+	margin-top: 20px;
+}

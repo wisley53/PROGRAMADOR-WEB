@@ -1,0 +1,75 @@
+/* CSS AUNO.css */
+
+* {
+ margin: 0; /* zerar margens */
+ padding: 0; /* zerar espaçamentos */
+ font-family: Arial, tahoma, open-sans; /* fonte */
+ font-size: 16px; /* tamanho da fonte */
+ color: #222; /* cor da fonte */
+}
+
+
+body {
+	background:#ececec;
+	
+}
+
+
+	
+* {
+font: 16px Arial, Tahoma, sans-serif;
+}
+	
+h1 {
+		
+text-align: center;
+font-size: 30px;
+		
+}
+	
+form{
+	width: 500px;
+	margin: auto;
+	line-height: 50px; /* altura da linha */
+	background: #ececec;
+	padding: 20px;
+}
+		
+label {
+	width: 150px;
+	display: inline-block;
+}
+		
+button {
+	width: 100px;
+	height: 30px;
+	
+}
+		
+#btsalvar {
+	background: #90caf9;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ececec;
+}
+		
+#btsair {
+	background: #f44336;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ececec;
+}
+		
+input, select {
+	height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+}
+		
+
+
+
+
+
+
+
