@@ -28,7 +28,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="tela_principal.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="modelos.php">modelos</a></li>
             <li class="active"><a href="#">Perfil</a></li>
 			<li><a href="cadastrar.php">cadastrar Usúario</a></li>
@@ -41,73 +41,55 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-		<div id="quadro1">
-	<h3>Lista de Perfil</h3>
-	<table border="5" >
+		
+	<?php
+	   $vetor = array();
+	$vetor[] = array("Nome"=>"Maria", "Idade"=>'22',"Email"=>"maria43@gmail.com", "Profissão"=>"Professora", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino Superior"); 
+	$vetor[] = array("Nome"=>"Lucas", "Idade"=>'19',"Email"=>"lucas11@gmail.com", "Profissão"=>"Analista", "Sexo"=>"Maculino", "Escolaridade"=>"Ensino Superior"); 
+	$vetor[] = array("Nome"=>"Carlos", "Idade"=>'32',"Email"=>"carlos66@gmail.com", "Profissão"=>"Engenheiro", "Sexo"=>"Maculino", "Escolaridade"=>"Ensino Superior");  
+	$vetor[] = array("Nome"=>"Brenda", "Idade"=>'21',"Email"=>"brenda23@gmail.com", "Profissão"=>"Enfermeira", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino Superior");  
+	$vetor[] = array("Nome"=>"Camila", "Idade"=>'19',"Email"=>"camila@gmail.com", "Profissão"=>"Tec.informática", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino médio");  
+?>
+
+	<div id="quadro1">
+	<h3>Lista de Registro</h3>
+	<table border="5">
 
 	<tr>
+      <th>Nome</th>
+      <th>Idade</th>
+	  <th>Email</th>
+      <th>Profissão</th>
+	  <th>Sexo</th>
+	  <th>Escolaridade</th>
+   </tr>
+   
+   
+<?php
+    foreach($vetor as $valores){
+?>
+   <tr>
+    <td><?php echo $valores['Nome'];?></td>
+    <td><?php echo $valores['Idade'];?></td>
+	 <td><?php echo $valores['Email'];?></td>
+    <td><?php echo $valores['Profissão'];?></td>
+	<td><?php echo $valores['Sexo'];?></td>
+	<td><?php echo $valores['Escolaridade'];?></td>
+</tr>
+   
+  
+	<?php
+    }
+?>
 
-	<th>Nome</th>
-	<th >Idade</th>
-	<th>Profissão</th>
+	</table> 
+	
+	
+	
+	
+	
+	
 
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Marcos</td>
-	<td bgcolor="#fff">23</td>
-	<td bgcolor="#fff">Tec.Enfermagen</td>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Lucal</td>
-	<td bgcolor="#fff"> 19</td>
-	<td bgcolor="#fff"> Motorista</td>
-
-	</tr>
-
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Carla</td>
-	<td bgcolor="#fff"> 21</td>
-	<td bgcolor="#fff"> Professora</td>
-
-	</tr>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Rafael</td>
-	<td bgcolor="#fff"> 34</td>
-	<td bgcolor="#fff"> Diretor de TI</td>
-
-	</tr>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Bruno</td>
-	<td bgcolor="#fff"> 32</td>
-	<td bgcolor="#fff"> Eng.Civil</td>
-
-	</tr>
-
-	</table>
 
 
  <ul>
@@ -207,7 +189,7 @@
 	
 	<footer class="footer">
 		<div class="container">
-			<p> Wisley santos de Oliveira &copy; 2018. </p>
+			<p> Wisley santos de Oliveira &copy; 2020. </p>
 		</div>
 	</footer>
 

@@ -1,0 +1,72 @@
+body {
+	padding-top: 50px;
+	margin-bottom: 60px; /* Margin bottom by footer height */
+	
+	
+	
+	
+	
+}
+/* Sticky footer styles------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+#quadro3 {
+	padding-top: 50px;
+	width:100%;
+	
+
+}
+
+
+h3{
+margin-left:30%;
+font-size: 50px;
+
+}
+
+
+#formulario{
+width:50%;
+border: 3px solid #f17118;
+background:#d3effb;
+padding-top:26px;
+margin-bottom:100px;
+padding-right:15px;
+padding-left:10px;
+margin-left: 25%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000000;
+}
+.footer p {
+	#line-height: 50px;
+	margin-top: 20px;
+	color:#FFFFFF;
+}
+
+table {
+	
+font-size:20px;
+border: 3px solid #f17118;
+background:#d3effb;
+border-radius:15px;
+margin-left: 25%;
+margin-bottom:30px;
+width:50%;
+}
+
+#quadro1 {
+	width:100%;
+margin-top:100px;	
+
+
+}

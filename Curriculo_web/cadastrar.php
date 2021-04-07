@@ -28,7 +28,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="tela_principal.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="modelos.php">modelos</a></li>
             <li><a href="perfil.php">Perfil</a></li>
 			<li class="active"><a href="#">cadastrar Usúario</a></li>
@@ -39,6 +39,44 @@
       </div>
     </nav>
 	
+	
+	
+	
+	<?php
+	   $vetor = array();
+	$vetor[] = array("Nome"=>"Maria", "Email"=>"maria43@gmail.com"); 
+	$vetor[] = array("Nome"=>"Lucas", "Email"=>"lucas11@gmail.com"); 
+	$vetor[] = array("Nome"=>"Carlos", "Email"=>"carlos66@gmail.com");  
+	$vetor[] = array("Nome"=>"Brenda", "Email"=>"brenda23@gmail.com");  
+	$vetor[] = array("Nome"=>"Camila", "Email"=>"camila@gmail.com");  
+?>
+
+	<div id="quadro1">
+	<h3>Lista de Registro</h3>
+	<table border="5">
+
+	<tr>
+      <th>Nome</th>
+	  <th>Email</th>
+      
+   </tr>
+   
+   
+<?php
+    foreach($vetor as $valores){
+?>
+   <tr>
+    <td><?php echo $valores['Nome'];?></td>
+	 <td><?php echo $valores['Email'];?></td>
+   
+</tr>
+   
+  
+	<?php
+    }
+?>
+
+	</table> 
 	
 	
 
@@ -78,6 +116,10 @@
 		echo "<p> Senha: $senha </p> </font>";
 		
 	?>
+	
+	
+	
+
 			
 	</form>
 	
@@ -115,7 +157,7 @@
 	
 	<footer class="footer">
 		<div class="container">
-			<p> Wisley santos de Oliveira &copy; 2018. </p>
+			<p> Wisley santos de Oliveira &copy; 2021. </p>
 		</div>
 	</footer>
 

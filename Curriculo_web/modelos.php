@@ -29,7 +29,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="tela_principal.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="active"><a href="#">modelos</a></li>
             <li><a href="perfil.php">Perfil</a></li>
 			<li><a href="cadastrar.php">cadastrar Usúario</a></li>
@@ -40,67 +40,46 @@
       </div>
     </nav>
 	
+	
+	<?php
+	   $vetor = array();
+	$vetor[] = array("Nome"=>"Maria", "Idade"=>'22', "Profissão"=>"Professora", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino Superior"); 
+	$vetor[] = array("Nome"=>"Lucas", "Idade"=>'19', "Profissão"=>"Analista", "Sexo"=>"Maculino", "Escolaridade"=>"Ensino Superior"); 
+	$vetor[] = array("Nome"=>"Carlos", "Idade"=>'32', "Profissão"=>"Engenheiro", "Sexo"=>"Maculino", "Escolaridade"=>"Ensino Superior");  
+	$vetor[] = array("Nome"=>"Brenda", "Idade"=>'21', "Profissão"=>"Enfermeira", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino Superior");  
+	$vetor[] = array("Nome"=>"Camila", "Idade"=>'19', "Profissão"=>"Tec.informática", "Sexo"=>"Feminino", "Escolaridade"=>"Ensino médio");  
+?>
 
 	<div id="quadro1">
 	<h3>Lista de Registro</h3>
 	<table border="5" >
 
 	<tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Profissão</th>
+	  <th>Sexo</th>
+	  <th>Escolaridade</th>
+   </tr>
+   
+   
+<?php
+    foreach($vetor as $valores){
+?>
+   <tr>
+    <td><?php echo $valores['Nome'];?></td>
+    <td><?php echo $valores['Idade'];?></td>
+    <td><?php echo $valores['Profissão'];?></td>
+	<td><?php echo $valores['Sexo'];?></td>
+	<td><?php echo $valores['Escolaridade'];?></td>
+</tr>
+   
+  
+	<?php
+    }
+?>
 
-	<th>Nome</th>
-	<th >Idade</th>
-	<th>Profissão</th>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Marcos</td>
-	<td bgcolor="#fff">23</td>
-	<td bgcolor="#fff">Tec.Enfermagen</td>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Lucal</td>
-	<td bgcolor="#fff"> 19</td>
-	<td bgcolor="#fff"> Motorista</td>
-
-	</tr>
-
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Carla</td>
-	<td bgcolor="#fff"> 21</td>
-	<td bgcolor="#fff"> Professora</td>
-
-	</tr>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Rafael</td>
-	<td bgcolor="#fff"> 34</td>
-	<td bgcolor="#fff"> Diretor de TI</td>
-
-	</tr>
-
-	</tr>
-
-	<tr>
-
-	<td bgcolor="#fff">Bruno</td>
-	<td bgcolor="#fff"> 32</td>
-	<td bgcolor="#fff"> Eng.Civil</td>
-
-	</tr>
-
-	</table>
+	</table> 
 
 
  <ul>
@@ -149,7 +128,7 @@
 			<?php
 		// criar variaveis e usar $_GET para pegar dados
 		@$nome = $_POST['nome'];
-		@$idade = $_POST['idade'];
+	  	@$idade = $_POST['idade'];
 		@$modelo = $_POST['modelo'];
 		// Escrever entre aspas string com variaveis sem usar ponto
 		

@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Modelos </title>
+    <title> Currículo online </title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/estilo-tela-principal.css" rel="stylesheet">
+	
+	<style> 
+	
+	body {
+	background:#f5f5f5;
+	}
+	ul li {
+    display: inline-block;
+	padding-left:5px;
+	padding-right:5px;
+
+}
 	
 	</style>
 	
@@ -28,12 +40,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="modelos.php">modelos</a></li>
             <li><a href="perfil.php">Perfil</a></li>
 			<li><a href="cadastrar.php">cadastrar Usúario</a></li>
 			<li><a href="adicionar.php">Adicionar currículo</a></li>
-			<li class="active"><a href="#">Sobre</a></li>
+			<li><a href="sobre.php">Sobre</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -41,32 +53,25 @@
 	
 	
 	
+	<div class="content-wrapper">
 	
-	<div class="col-md-10">
-	<h3></h3>
-	<h4>O Site desenvolvido é para criação de curriculo online, fácil e prático para desenvolver </h4>
-
- 
-<h2>Wisley santos</h2> <h5> Diretoro de Criação.<h5> <h5>Programador Web. </h5>
- 
- <ul>
-     <li>
-        <img width="390px"  height="290px" src="images/foto-perfil.jpg">
+	<?php
 		
-    </li>
-    <li>
-        <img  width="390px"  height="290px" src="images/img1.jpg">
+		if(isset($_GET["modulo"])) { $modulo = $_GET["modulo"];} else { $modulo =  "dashboard";}
+		if(isset($_GET["acao"])){ $acao= $_GET["acao"];} else {$acao= "ver";}
 		
-    </li>
-	
-	  <li>
-        <img width="390px"  height="290px" src="images/img2.jpg">
+		if($modulo)
+			if(file_exists("Curriculo_web/".$modulo."/".$acao.".php")) {
+				include("Curriculo_web/".$modulo."/".$acao.".php");
+			}else{
+				echo "A pagina nao existe";
+				
+			}
+			
 		
-    </li>
-	
-	</ul>
-
-	
+		
+		?>
+		
 	
 	</div>
 	
@@ -74,9 +79,40 @@
 	
 	
 	
-   
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Currículo online</h1>
+        <p>Faça o seu cadastro e deixe o seu currículo visível para empresas e profissionais.</p>
+        <p><a class="btn btn-primary btn-lg" href="cadastrar.php" role="button">Cadastre-se &raquo;</a></p>
+      </div>
+    </div>
+	
+	
+	 	  <ul>
+     <li>
+        <img width="390px"  height="290px" src="images/foto1.png">
+    </li>
+    <li>
+        <img  width="390px"  height="290px" src="images/foto2.jpg">
+    </li>
+	
+	  <li>
+        <img width="390px"  height="290px" src="images/foto3.png">
+    </li>
+	
+	</ul>
+
 	
 	<footer class="footer">
 		<div class="container">
